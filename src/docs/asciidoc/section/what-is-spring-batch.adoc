@@ -1,0 +1,28 @@
+== What Is Spring Batch?
+
+A lightweight, comprehensive batch framework designed to enable the development of robust batch applications vital for the daily operations of enterprise systems.
+
+=== Features
+
+* Transaction management
+* Chunk based processing
+* Declarative I/O
+* Start/Stop/Restart
+* Retry/Skip
+* Web based administration interface (Spring Cloud Data Flow)
+
+=== Getting Started
+
+.Maven
+```
+<dependency>
+    <groupId>org.springframework.batch</groupId>
+    <artifactId>spring-batch-core</artifactId>
+    <version>V.V.V</version>
+</dependency>
+```
+
+.Gradle
+```
+implementation group: 'org.springframework.batch', name: 'spring-batch-core', version: 'V.V.V'
+```

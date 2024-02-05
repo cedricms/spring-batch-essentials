@@ -2,4 +2,8 @@
 
 === Basic Principals
 
+image::./img/spring_batch_basic_principales.png[Basic Principals, float="center"]
+
 === The Big Picture
+
+image::./img/spring-batch-big-picture.png[The Big Picture, 75%, 75%, float="center"]

@@ -13,4 +13,6 @@ include::./section/what-is-spring-batch.adoc[]
 
 include::./section/jobs.adoc[]
 
+include::./section/data-sources.adoc[]
+
 == That's All Folks :)

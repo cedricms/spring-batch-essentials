@@ -1,0 +1,19 @@
+== Transactions
+
+[source,java]
+----
+@Bean
+public Step step1(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
+	DefaultTransactionAttribute attribute = new DefaultTransactionAttribute();
+	attribute.setPropagationBehavior(Propagation.REQUIRED.value());
+	attribute.setIsolationLevel(Isolation.DEFAULT.value());
+	attribute.setTimeout(30);
+
+	return new StepBuilder("step1", jobRepository)
+				.<String, String>chunk(2, transactionManager)
+				.reader(itemReader())
+				.writer(itemWriter())
+				.transactionAttribute(attribute)
+				.build();
+}
+----

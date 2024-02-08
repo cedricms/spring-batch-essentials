@@ -19,6 +19,8 @@ include::./section/data-sources.adoc[]
 
 == Writer
 
+include::./section/transactions.adoc[]
+
 include::./section/parallel-processing.adoc[]
 
 include::./section/error-handling.adoc[]

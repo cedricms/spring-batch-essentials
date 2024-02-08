@@ -1,0 +1,51 @@
+== Error Handling
+
+=== Skip
+
+[source,java]
+----
+@Bean
+public Step step1(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
+	return new StepBuilder("step1", jobRepository)
+				.<String, String>chunk(10, transactionManager)
+				.reader(flatFileItemReader())
+				.writer(itemWriter())
+				.faultTolerant()
+				.skipLimit(10)
+				.skip(FlatFileParseException.class)
+				.build();
+}
+----
+
+=== Retry
+
+[source,java]
+----
+@Bean
+public Step step1(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
+	return new StepBuilder("step1", jobRepository)
+				.<String, String>chunk(2, transactionManager)
+				.reader(itemReader())
+				.writer(itemWriter())
+				.faultTolerant()
+				.retryLimit(3)
+				.retry(DeadlockLoserDataAccessException.class)
+				.build();
+}
+----
+
+=== Rollback
+
+[source,java]
+----
+@Bean
+public Step step1(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
+	return new StepBuilder("step1", jobRepository)
+				.<String, String>chunk(2, transactionManager)
+				.reader(itemReader())
+				.writer(itemWriter())
+				.faultTolerant()
+				.noRollback(ValidationException.class)
+				.build();
+}
+----

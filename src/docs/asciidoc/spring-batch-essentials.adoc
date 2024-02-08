@@ -15,9 +15,13 @@ include::./section/jobs.adoc[]
 
 include::./section/data-sources.adoc[]
 
+== Reader
+
+== Writer
+
 include::./section/parallel-processing.adoc[]
 
-== Error Management
+include::./section/error-handling.adoc[]
 
 == Administration
 

@@ -4,6 +4,7 @@
 ** CSV
 ** Flat File
 ** JSON
+** Multi-File Input
 ** XML
 ** ...
 * Databases

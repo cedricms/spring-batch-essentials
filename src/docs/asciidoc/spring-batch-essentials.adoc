@@ -17,7 +17,13 @@ include::./section/data-sources.adoc[]
 
 == Reader
 
+Define the mapping to apply while reading takes place.
+
+Depending on the file format, "skip lines" options may exist (skip the header).
+
 == Writer
+
+Define the mapping to apply in order to write the data.
 
 include::./section/transactions.adoc[]
 
@@ -25,6 +31,6 @@ include::./section/parallel-processing.adoc[]
 
 include::./section/error-handling.adoc[]
 
-== Administration
+include::./section/administration.adoc[]
 
 == That's All Folks :)

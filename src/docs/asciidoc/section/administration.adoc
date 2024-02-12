@@ -1,0 +1,15 @@
+== Administration
+
+.Maven
+```
+<dependency>
+    <groupId>de.codecentric</groupId>
+    <artifactId>spring-boot-admin-starter-server</artifactId>
+    <version>V.V.V</version>
+</dependency>
+```
+
+.Gradle
+```
+implementation 'de.codecentric:spring-boot-admin-starter-server:V.V.V'
+```
